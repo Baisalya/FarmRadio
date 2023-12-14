@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/galleryFragment"
+        android:title="Gallery" />
+
+    <item
+        android:id="@+id/videosFragment"
+        android:title="Videos" />
+
+    <item
+        android:id="@+id/podcastFragment"
+        android:title="Podcast" />
+
+    <item
+        android:id="@+id/audioFragment"
+        android:title="Audio" />
+
+    <item
+        android:id="@+id/aboutUsFragment"
+        android:title="About Us" />
+
+</menu>

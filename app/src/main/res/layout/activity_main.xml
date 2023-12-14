@@ -1,0 +1,77 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".ui.MainActivity">
+
+            <!-- AppBarLayout -->
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:liftOnScroll="true">
+
+                <!-- Toolbar -->
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    android:elevation="4dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/navHostFragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:defaultNavHost="true"
+                app:layout_constraintBottom_toTopOf="@id/bottomNav"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appbarLayout"
+                app:navGraph="@navigation/nav_graph" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNav"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:menu="@menu/bottom_nav_menu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
