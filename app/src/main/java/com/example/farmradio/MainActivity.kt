@@ -1,5 +1,6 @@
 package com.example.farmradio
 
+import android.annotation.SuppressLint
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +8,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
+import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -14,7 +16,14 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.recyclerview.widget.RecyclerView
 import com.example.farmradio.databinding.ActivityMainBinding
+import com.google.android.gms.tasks.OnSuccessListener
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.firebase.FirebaseApp
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ListResult
+import com.google.firebase.storage.StorageReference
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,7 +36,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        /**                      **/
+        FirebaseApp.initializeApp(this)
+        @SuppressLint("MissingInflatedId", "LocalSuppress") val toolbar: MaterialToolbar = findViewById(R.id.toolbar)
 
+        setSupportActionBar(toolbar)
+
+        val reference: StorageReference = FirebaseStorage.getInstance().reference
+
+        reference.listAll().addOnSuccessListener { listResult: ListResult ->
+            val directoryNames = listResult.prefixes.joinToString(", ") { it.name }
+            Toast.makeText(this@MainActivity, "Directories: $directoryNames", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener { e ->
+            Toast.makeText(this@MainActivity, "There was an error while listing directories", Toast.LENGTH_SHORT).show()
+        }
+        /**    **/
+        /**    **/
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         navController = navHostFragment.navController
