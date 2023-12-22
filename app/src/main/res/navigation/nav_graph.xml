@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.farmradio.sidenavigation.HomeFragment"
-        android:label="fragment_home"
+        android:label="Home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
@@ -34,9 +34,9 @@
         tools:layout="@layout/fragment_audio" />
     <fragment
         android:id="@+id/aboutUsFragment"
-        android:name="com.example.farmradio.sidenavigation.AudioFragment"
+        android:name="com.example.farmradio.sidenavigation.AboutUsFragment"
         android:label="About Us"
-        tools:layout="@layout/fragment_audio" />
+        tools:layout="@layout/fragment_about_us" />
 
 
     <fragment

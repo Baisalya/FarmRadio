@@ -50,7 +50,7 @@ class VideosFragment : Fragment() {
     }
 
     private fun loadVideoItems() {
-        val directory = "Images"
+        val directory = "Videos"
         val reference = FirebaseStorage.getInstance().getReference().child(directory)
 
         reference.listAll()

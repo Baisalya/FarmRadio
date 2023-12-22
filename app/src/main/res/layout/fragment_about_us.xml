@@ -1,13 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".sidenavigation.AboutUsFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="About Us" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Farm Radio - Bringing Agriculture Closer to You"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Farm radio is a groundbreaking initiative introduced by the Extension Centre of ANGRAU. It is the first of its kind, an Internet Radio accessible wherever there's an Internet connection, eliminating geographical boundaries. While terrestrial radio requires proximity to a station, online radio is accessible globally, revolutionizing the way we access and listen to broadcasts." />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Access to the Internet is so easy these days, with long WiFi ranges, public places offering free internet access, and 4G/LTE mobile data. Unlike AM/FM, as stations are limited to their transmitter, online radio is everywhere and accessible at any time, whether you have a smartphone, laptop, or tablet – check in on your station wherever you are, be it at home or on the other side of the World. As for listeners, anyone with an Internet connection can listen to farm radio, meaning a wide audience to attract, literally billions of potential people ready to connect and listen to farm Radio." />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Farm radio gives freedom to podcast what you want and when you want it, with better sound qualities to listeners." />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Features of podcast:"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Management practices of crops" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Seasonal agro advisories of different crops" />
+
+        <!-- Add more bullet points for each feature -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Success stories etc."
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Developed by:"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dr. P.B.Pradeep Kumar - Scientist(T.O.T.), DAATTC, Kondempudi, Visakhapatnam"
+            android:textSize="14sp" />
+
+        <!-- Repeat the above TextView element pattern for each contributor -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Precautions to be taken in various crops which are inundated during a storm or heavy rains"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Management of insects in rice in the state in the month of May. This is an about page text showing these text professionally in UI."
+            android:paddingBottom="8dp" />
+
+    </LinearLayout>
+</ScrollView>

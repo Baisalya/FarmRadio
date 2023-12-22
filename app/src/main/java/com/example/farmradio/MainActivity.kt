@@ -3,10 +3,12 @@ package com.example.farmradio
 import android.annotation.SuppressLint
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.NavController
@@ -41,8 +43,7 @@ class MainActivity : AppCompatActivity() {
         @SuppressLint("MissingInflatedId", "LocalSuppress") val toolbar: MaterialToolbar = findViewById(R.id.toolbar)
 
         setSupportActionBar(toolbar)
-
-        val reference: StorageReference = FirebaseStorage.getInstance().reference
+        toolbar.setBackgroundColor(Color.parseColor("#2E8B57"));        val reference: StorageReference = FirebaseStorage.getInstance().reference
 
         reference.listAll().addOnSuccessListener { listResult: ListResult ->
             val directoryNames = listResult.prefixes.joinToString(", ") { it.name }
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
         val headerView = binding.navView.getHeaderView(0)
         headerText = headerView.findViewById(R.id.appVersion)
-
+        headerView.setBackgroundColor(Color.parseColor("#2E8B57"));
         setSupportActionBar(binding.toolbar)
 
         try {
@@ -79,7 +80,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.aboutUsFragment
             ), binding.drawerLayout
         )
-
+        binding.bottomNav.visibility = View.GONE
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)
         binding.bottomNav.setupWithNavController(navController)

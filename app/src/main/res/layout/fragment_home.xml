@@ -1,21 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".sidenavigation.HomeFragment">
 
-    <TextView
-        android:id="@+id/text1"
+    <ImageView
+        android:id="@+id/backgroundImageView"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="15sp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="#4CAF50"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/whatsappButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_whatsapp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:onClick="navigateToWhatsApp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bottomTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:text="IN THE SERVICE OF\nFARMERS"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
         android:gravity="center"
-        android:padding="15sp"
-        android:text="This is Home Screen / DashBoard"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints" />
+        android:textAlignment="center"/>
 
-
-</LinearLayout>
+</RelativeLayout>

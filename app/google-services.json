@@ -1,0 +1,144 @@
+{
+  "project_info": {
+    "project_number": "236917837377",
+    "firebase_url": "https://onlinemusicappserverside-c3a02-default-rtdb.firebaseio.com",
+    "project_id": "onlinemusicappserverside-c3a02",
+    "storage_bucket": "onlinemusicappserverside-c3a02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236917837377:android:88b7e917faed666ef100c0",
+        "android_client_info": {
+          "package_name": "Infyshine.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmiZxVBLzZui9jafxWyDTLYVd5X2kO880"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236917837377:android:0e1a0673424401e7f100c0",
+        "android_client_info": {
+          "package_name": "co.median.android.arayzd.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmiZxVBLzZui9jafxWyDTLYVd5X2kO880"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236917837377:android:bf1f3c9c209f1ffcf100c0",
+        "android_client_info": {
+          "package_name": "com.example.farmradio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmiZxVBLzZui9jafxWyDTLYVd5X2kO880"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236917837377:android:3f153d5a58ffaebcf100c0",
+        "android_client_info": {
+          "package_name": "com.example.firebase_directory_listing_android_main"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmiZxVBLzZui9jafxWyDTLYVd5X2kO880"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236917837377:android:2c0bb18bb38017def100c0",
+        "android_client_info": {
+          "package_name": "com.example.firebasefileslisting"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmiZxVBLzZui9jafxWyDTLYVd5X2kO880"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236917837377:android:0e534e9838748f90f100c0",
+        "android_client_info": {
+          "package_name": "com.example.onlinemusicappclient"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmiZxVBLzZui9jafxWyDTLYVd5X2kO880"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236917837377:android:16a8785fe4176fe4f100c0",
+        "android_client_info": {
+          "package_name": "com.example.onlinemusicappserverside"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmiZxVBLzZui9jafxWyDTLYVd5X2kO880"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

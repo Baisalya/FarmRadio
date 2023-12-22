@@ -43,6 +43,14 @@ data class VideoItem(
     var uri: Uri? = null,
     var name: String? = null
 )
+data class AudioItem(
+    var uri: Uri? = null,
+    var name: String? = null
+)
+data class ImageItem(
+    var uri: Uri? = null,
+    var name: String? = null
+)
 data class Data(
     val name: String,
     val uri: Uri,

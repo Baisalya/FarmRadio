@@ -8,17 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.media3.ui.PlayerView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.farmradio.R  // Replace with the actual package name
-import com.example.farmradio.databinding.ListItemVideoBinding
-import com.example.farmradio.dataclass.Data
+import com.example.farmradio.R
 import com.example.farmradio.dataclass.VideoItem
-import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.SimpleExoPlayer
 
 class VideoAdapter : ListAdapter<VideoItem, VideoAdapter.VideoViewHolder>(VideoDiffCallback()) {
 
@@ -41,6 +36,7 @@ class VideoAdapter : ListAdapter<VideoItem, VideoAdapter.VideoViewHolder>(VideoD
             textViewTitle.text = videoItem.name
             Glide.with(itemView)
                 .load(videoItem.uri)
+                .error(R.drawable.error_image)
                 .into(imageViewThumbnail)
             // Now you can use videoItem.uri to load and display video thumbnail or other details
             // You can use a library like Glide or Picasso for loading images
@@ -54,7 +50,7 @@ class VideoAdapter : ListAdapter<VideoItem, VideoAdapter.VideoViewHolder>(VideoD
 
         private fun openGallery(context: Context, imageUri: Uri) {
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.setDataAndType(imageUri, "image/*")
+            intent.setDataAndType(imageUri, "video/mp4")
             context.startActivity(intent)
         }
     }
