@@ -14,7 +14,6 @@ FarmRadio is an Android application developed in Android Studio that serves as a
 
    ```bash
    git clone https://github.com/Baisalya/FarmRadio
-   Certainly! Below is a sample README.md file for your FarmRadio Android app project on GitHub. Make sure to replace the placeholders with actual details about your project.
 
 markdown
 
@@ -28,12 +27,6 @@ FarmRadio is an Android application developed in Android Studio that serves as a
 - Audio section allows users to play and pause audio files from the Firebase database.
 - Video and Photos sections display thumbnails; clicking on them opens the respective content in an external app or player.
 
-## Setup
-
-1. Clone the repository to your local machine:
-
-   ```bash
-   git clone https://github.com/your-username/farmradio-android.git
 
     Open the project in Android Studio.
 
